@@ -1,0 +1,117 @@
+﻿
+@{
+    ViewData["Title"] = "IndexListar";
+    Layout = "~/Views/Share/_Layout.cshtml";
+}
+
+
+<!-- Compiled and minified JavaScript
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">-->
+    <link rel="stylesheet" hhref="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<script src="https: //cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+
+
+@section js {
+    <script src="~/views/cadastrarProduto/indexListar.js"></script>
+}
+<section class="section-bg wow fadeInUp">
+    <div class="container container-conteudo">
+
+        <div class="section-header">
+            <h3>Listar produtos</h3>
+            <p>Utilize o formulário para pesquisar produtos.</p>
+        </div>
+
+        <div class="form">
+            <div id="sendmessage"></div>
+            <div id="errormessage"></div>
+            <form role="form" class="contactForm">
+                <div class="form-row">
+
+                    <div class="form-group col-md-12">
+                        <input type="search" name="descrição"
+                               class="form-control"
+                               id="descricao" placeholder="Descrição do produto" />
+                    </div>
+
+                    <div id="divMsg"></div>
+
+                </div>
+
+                <div class="text-center">
+                    <div class="btn btn-light">
+                        <input class="btn btn-light" type="button"
+                               value="Pesquisar"
+                               id="btnPesquisar"
+                               onclick="indexListar.btnPesquisarOnClick()" />
+                        <i class="fas fa-search" style="color:deepskyblue"></i>
+                    </div>
+                </div>
+                <div id="divMsg"></div>
+            </form>
+            <br />
+            <br />
+            
+            <div class="card-body" >
+                <div class="table-responsive" style="background-color: white">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <div class="dataTables_length" id="dataTable_length">
+                                <label>
+                                    Show <select name="dataTable_length" aria-controls="dataTable" class="custom-select custom-select-sm form-control form-control-sm">
+                                        <option value="1">1</option>
+                                        <option value="25">25</option>
+                                        <option value="50">50</option>
+                                        <option value="100">100</option>
+                                    </select> entries
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <div id="dataTable_filter" class="dataTables_filter">
+                                <label>Search:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="dataTable"> </label>
+                            </div>
+                        </div>
+                    </div>
+                    <table class="table table-bordered" id="tbUsuarios" width="100%" cellspacing="0" style="display:none">
+                        <thead>
+                            <tr role="row">
+                                <th>Id</th>
+                                <th>Descrição</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbodyUsuarios">
+                            <!--Aqui... carregado por ajax-->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <br />
+            <br />
+            <div class="row">
+                <div class="col-sm-12 col-md-5">
+                    <div class="dataTables_info" id="dataTable_info" role="status" aria-live="polite">Showing 1 to 50 of 57 entries</div>
+                </div><div class="col-sm-12 col-md-7">
+                    <div class="dataTables_paginate paging_simple_numbers" id="dataTable_paginate">
+                        <ul class="pagination">
+                            <li class="paginate_button page-item previous disabled" id="dataTable_previous">
+                                <a href="#" aria-controls="dataTable" data-dt-idx="0" tabindex="0" class="page-link">Previous</a>
+                            </li>
+                            <li class="paginate_button page-item active"><a href="#" aria-controls="dataTable" data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
+                            <li class="paginate_button page-item ">
+                                <a href="#" aria-controls="dataTable" data-dt-idx="2" tabindex="0" class="page-link">2</a>
+                            </li>
+                            <li class="paginate_button page-item next" id="dataTable_next">
+                                <a href="#" aria-controls="dataTable" data-dt-idx="3" tabindex="0" class="page-link">Next</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

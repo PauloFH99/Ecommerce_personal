@@ -1,0 +1,60 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SB Admin 2 - Dashboard</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="~/lib/startbootstrap-sb-admin-2-gh-pages/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!--
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+      <!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> Compiled and minified JavaScript -->
+    <!-- Custom styles for this template-->
+
+    <link href="~/lib/startbootstrap-sb-admin-2-gh-pages/css/sb-admin-2.css" rel="stylesheet" />
+    @RenderSection("css", false)
+
+  
+
+</head>
+<body>
+    <main id="main">
+        <h1>@ViewData["Title"]</h1>
+        @RenderBody()
+
+
+    </main>
+</body>
+
+<!-- Bootstrap core JavaScript-->
+
+<script src="~/lib/startbootstrap-sb-admin-2-gh-pages/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Core plugin JavaScript-->
+
+<!-- Custom scripts for all pages-->
+<script src="~/lib/startbootstrap-sb-admin-2-gh-pages/js/sb-admin-2.min.js"></script>
+
+<!-- Page level plugins -->
+<script src="~/lib/startbootstrap-sb-admin-2-gh-pages/vendor/chart.js/Chart.min.js"></script>
+
+<!-- Page level custom scripts -->
+<script src="~/lib/startbootstrap-sb-admin-2-gh-pages/js/demo/chart-area-demo.js"></script>
+<script src="~/lib/startbootstrap-sb-admin-2-gh-pages/js/demo/chart-pie-demo.js"></script>
+
+@RenderSection("js", false)
+</html>

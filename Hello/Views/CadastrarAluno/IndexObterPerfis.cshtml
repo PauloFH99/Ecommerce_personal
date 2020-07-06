@@ -1,0 +1,59 @@
+﻿
+@{
+    ViewData["Title"] = "Pesquisar Perfil";
+    Layout = "~/Views/Share/_LayoutModal.cshtml";
+}
+@section js{
+    <script src="~/views/cadastrarAluno/indexObterPerfil.js"></script>
+
+}
+
+<div class="container container-conteudo">
+
+
+
+    <div class="form">
+
+        <form role="form" class="contactForm">
+            <div class="form-row">
+
+                <div class="form-group col-md-12">
+                    <input type="search" name="descrição"
+                           class="form-control"
+                           id="descricao" placeholder="Descrição do perfil" />
+                </div>
+
+                <div id="divMsg"></div>
+
+            </div>
+
+            <div class="text-center">
+                <div class="btn btn-light">
+                    <input class="btn btn-light" type="button"
+                           value="Pesquisar"
+                           id="btnPesquisar"
+                           onclick="indexObterPerfil.btnPesquisarOnClick()" />
+                    <i class="fas fa-search" style="color:deepskyblue"></i>
+                </div>
+            </div>
+
+        </form>
+
+        <table class="table-responsive" id="tbPerfils" width="100%" cellspacing="0" style="display:none">
+            <thead>
+                <tr role="row">
+                    <th>Id</th>
+                    <th>Descrição</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="tbodyPerfis">
+                <!--Aqui... carregado por ajax-->
+            </tbody>
+        </table>
+
+
+
+    </div>
+</div>
+
