@@ -11,7 +11,6 @@ namespace Hello.Controllers
         public IActionResult Index()
         {
 
-
             return View();
         }
         public IActionResult Login()
